@@ -1,0 +1,151 @@
+/* .navbar {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;;
+}
+
+.nav-link {
+  margin-right: 15px !important;;
+  font-weight: 500 !important;;
+  color: white !important;
+}
+
+.dropdown-menu {
+  right: 0 !important;;
+  left: auto !important;;
+} */
+
+body{
+  background-color: rgb(48, 45, 45) !important;
+}
+
+.navbar-brand span{
+  color: yellow;
+}
+
+
+/* Navbar Styles */
+.navbar {
+  background-color: #333 !important; /* Dark background */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+  padding: 10px 20px; /* Add padding to navbar */
+  
+}
+
+/* Logo Styling */
+.navbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f8f9fa;
+  text-transform: uppercase;
+}
+
+.navbar .navbar-brand:hover {
+  color: #fc4300; /* Hover effect */
+  text-decoration: none;
+}
+
+/* Navbar Link Styles */
+.navbar .nav-link {
+  margin-right: 15px !important;
+  font-weight: 500 !important;
+  color: white !important;
+  font-size: 1.1rem; /* Slightly larger font */
+  text-transform: uppercase; /* Make link text uppercase */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Navbar Link Hover Effect */
+.navbar .nav-link:hover {
+  color: #ff7f50 !important; /* Change color on hover */
+  text-decoration: underline; /* Underline effect on hover */
+  transform: scale(1.03);
+}
+
+/* User Profile Icon */
+.navbar .navbar-nav .dropdown .btn {
+  background: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.navbar .navbar-nav .dropdown .btn img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.btn img{
+  height: 30px;
+  width: 30px;
+}
+
+
+
+/* Dropdown Menu Styles */
+.navbar .dropdown-menu {
+  background-color: #444 !important;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  right: 0 !important;
+  left: auto !important;
+  margin-top: 5px;
+}
+
+/* Dropdown Item Styles */
+.navbar .dropdown-item {
+  color: #f8f9fa;
+  font-size: 1.1rem;
+  padding: 8px 15px;
+  text-transform: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: #ff7f50;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.05);
+}
+
+/* Active Link Styles */
+.navbar .nav-link.active {
+  color: #ff7f50 !important; /* Highlight active link */
+  font-weight: bold;
+}
+
+/* Spacing between navbar items */
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav .nav-link {
+  margin-left: 10px;
+}
+
+/* Adjust dropdown menu for small screens */
+@media (max-width: 768px) {
+  .navbar .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar .navbar-nav .dropdown-menu {
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+
+
+

@@ -1,0 +1,123 @@
+.movie-list{
+  margin-top: 30px;
+}
+
+
+
+/* Search and Location Section Styling */
+.search-location-container {
+    display: flex;
+    justify-content: center; /* Center the search bar and dropdown */
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px;
+    gap: 20px; /* Add spacing between the search bar and dropdown */
+  }
+  
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar {
+    width: 400px; /* Wider search bar */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Location Dropdown Styling */
+  .location-dropdown {
+    position: relative;
+  }
+  
+  .dropdown-btn {
+    background-color: rgb(227, 70, 70);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 150px;
+  }
+  
+  /* Dropdown Menu Styling */
+  .dropdown-menu {
+    display: none; /* Initially hidden */
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: rgb(48, 45, 45) !important; /* Black background */
+    border: 1px solid #444;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    list-style-type: none;
+    padding: 0;
+    margin-top: 3px !important;
+  }
+  
+  .dropdown-menu .dropdown-item {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white; /* White text for visibility */
+    transition: all 0.1s ease-in;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color:#ff7f50; /* Slightly lighter black on hover */
+    color: white;
+    transform: scale(1.05);
+    font-weight: 600;
+  }
+  
+  /* Show dropdown on hover */
+  .location-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+  
+  /* Movie Cards Styling */
+  .movie-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 20px;
+  }
+  
+  .movie-card {
+    width: 300px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .movie-card-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .movie-card-content {
+    padding: 15px;
+  }
+  
+  .movie-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .movie-description {
+    color: #777;
+    font-size: 14px;
+  }
+  

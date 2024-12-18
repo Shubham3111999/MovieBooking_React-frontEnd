@@ -1,0 +1,75 @@
+.wrapper {
+  /* margin-top: 70px; */
+  /* background: linear-gradient(135deg, rgb(0 0 0), rgb(63 3 3)); */
+  background-color: rgb(34, 29, 29);
+}
+
+.movie-detail {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  color: white;
+  border-radius: 8px;
+  margin-left: 10%;
+}
+
+.movie-image img {
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+.movie-info .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.favorite-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #ff5252;
+  transition: color 0.3s ease;
+}
+
+.favorite-icon:hover {
+  color: #ff1744;
+}
+
+.rating {
+  font-size: 1.2rem;
+  color: #ff9800;
+}
+
+.formats,
+.languages,
+.details {
+  font-size: 1rem;
+  color: #d0c5c5;
+}
+
+.book-ticket {
+  padding: 10px 20px;
+  background-color: #ff5252;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 8%;
+}
+
+.book-ticket:hover {
+  background-color: #ff1744;
+}

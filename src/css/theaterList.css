@@ -1,0 +1,79 @@
+/* Container Styling */
+.theater-list {
+    padding: 20px;
+    background-color: rgb(48, 45, 45);
+  }
+  
+  .theater-list .movie-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+  
+  /* Theater Cards Container */
+  .theater-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* Theater Card Styling */
+  .theater-card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .theater-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .theater-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000000;;
+    margin-bottom: 10px;
+  }
+  
+  .theater-address {
+    font-size: 1rem;
+    color: #2b2a2a;
+    margin-bottom: 15px;
+  }
+  
+  /* Book Ticket Button */
+  .book-ticket-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-ticket-btn:hover {
+    background-color: #c61b2c;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .theater-cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .theater-card {
+      width: 90%;
+    }
+  }
+  
