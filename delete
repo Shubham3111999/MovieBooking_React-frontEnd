@@ -1,4 +1,0 @@
-  background-color: rgb(48, 45, 45);
-  color: #fc4300; 
-
-  F:\CN\SpringBoot\movieBooking-project>java -jar target/movieBooking-0.0.1-SNAPSHOT.jar

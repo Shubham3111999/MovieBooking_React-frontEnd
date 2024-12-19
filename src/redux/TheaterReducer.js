@@ -55,9 +55,6 @@ const theaterSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(fetchAllTheatersForLocation.fulfilled, (state, action) => {
-            console.log('theaters ', action.payload);
-            console.log('state.movieSelected ', state.movieSelected);
-            console.log('state.locationName ', state.locationName);
 
             let filteredTheaterByMovieShow=[];  //check theater have show for selected movie
 
@@ -70,7 +67,6 @@ const theaterSlice = createSlice({
                 }
             })
 
-            console.log('filteredTheaterByMovieShow ', filteredTheaterByMovieShow);
 
             state.theaters = filteredTheaterByMovieShow;
         })

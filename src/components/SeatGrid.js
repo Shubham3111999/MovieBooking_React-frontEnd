@@ -124,7 +124,6 @@ const SeatGrid = ({ rows = 3, columns = 3 }) => {
     })
 
     setDateTimeShowObj(showDateTimeSeat)   //set dateTimeObject
-
     
     //build dates state
     const datesArray = [];
