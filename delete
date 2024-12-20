@@ -1,0 +1,19 @@
+  background-color: rgb(48, 45, 45);
+  color: #fc4300; 
+
+  F:\CN\SpringBoot\movieBooking-project>java -jar target/movieBooking-0.0.1-SNAPSHOT.jar
+
+  kafka-
+  zookeeper-server-start.bat ..\..\config\zookeeper.properties - bin/windows file cmd
+  kafka-server-start.bat ..\..\config\server.properties  - start server
+  kafka-topics.bat --create --topic <topic-name> --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1  -To create kafka topics
+  kafka-topics.bat --list --bootstrap-server localhost:9092       --list kafka topics
+
+  DATASOURCE_URL:jdbc:mysql://localhost:3306/bookmovie?createDatabaseIfNotExist=true
+         DATASOURCE_USERNAME:root
+         DATASOURCE_PASSWORD:Shubham@3
+         
+         MAIL_USERNAME:karan.more33345@gmail.com
+         MAIL_PASSWORD:D07ECDF7C71FB3896DF659672FBBD11C6666
+         MAIL_PORT:2525
+         KAFKA_SERVER: localhost:9092

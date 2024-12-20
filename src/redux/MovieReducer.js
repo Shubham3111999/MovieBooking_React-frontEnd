@@ -17,7 +17,7 @@ export const fetchAllMovies=createAsyncThunk(
             }
         };
 
-        let response = await fetch("http://localhost:8080/movie/getAllMovies",options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/movie/getAllMovies",options);
 
         if (!response.ok) {
             thunkApi.dispatch(actionJwt.resetJwtToken());  //set jwtToken to null //for refresh navbar
@@ -44,7 +44,7 @@ export const fetchAllLocations=createAsyncThunk(
             }
         };
 
-        let response =await fetch("http://localhost:8080/location/getAllLocations",options);
+        let response =await fetch(process.env.REACT_APP_BACKEND_URL+"/location/getAllLocations",options);
 
         if (!response.ok) {
             thunkApi.dispatch(actionJwt.resetJwtToken());  //set jwtToken to "" //for refresh navbar

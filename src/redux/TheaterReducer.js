@@ -15,7 +15,7 @@ export const fetchAllTheatersForLocation = createAsyncThunk(
             }
         };
 
-        let response = await fetch("http://localhost:8080/theater/getAllTheaterByLocation/" + arg.locationName, options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/theater/getAllTheaterByLocation/" + arg.locationName, options);
 
 
         if (!response.ok) {

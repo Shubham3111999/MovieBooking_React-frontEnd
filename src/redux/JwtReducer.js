@@ -20,7 +20,7 @@ export const signUpUser=createAsyncThunk(
             body: JSON.stringify(data), // Convert the JavaScript object to a JSON string
         }
 
-        let response = await fetch("http://localhost:8080/user/register",options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/user/register",options);
 
         if (!response.ok) {
             return thunkApi.rejectWithValue("Failed to sign up");
@@ -50,7 +50,7 @@ export const fetchJwt = createAsyncThunk(
             body: JSON.stringify(data), // Convert the JavaScript object to a JSON string
         };
 
-        let response = await fetch("http://localhost:8080/auth/login", options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/auth/login", options);
 
         if (!response.ok) {
            

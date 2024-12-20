@@ -178,7 +178,7 @@ const SeatGrid = ({ rows = 3, columns = 3 }) => {
 
 
     //websocket connection
-    const socket = new SockJS("http://localhost:8080/ws"); // SockJS endpoint
+    const socket = new SockJS(process.env.REACT_APP_BACKEND_URL+"/ws"); // SockJS endpoint
     const client = new Client({
       webSocketFactory: () => socket,
       reconnectDelay: 5000, // Auto-reconnect in 5 seconds

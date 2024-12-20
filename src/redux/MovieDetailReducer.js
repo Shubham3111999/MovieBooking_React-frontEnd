@@ -16,7 +16,7 @@ export const addMovieToLikedList=createAsyncThunk(
             },
         };
 
-        let response = await fetch("http://localhost:8080/user/addLikedMovie/"+arg.email+"?movieId="+arg.movieId, options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/user/addLikedMovie/"+arg.email+"?movieId="+arg.movieId, options);
 
 
         if (!response.ok) {
@@ -50,7 +50,7 @@ export const removeMovieToLikedList=createAsyncThunk(
             },
         };
 
-        let response = await fetch("http://localhost:8080/user/removeLikedMovie/"+arg.email+"?movieId="+arg.movieId, options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/user/removeLikedMovie/"+arg.email+"?movieId="+arg.movieId, options);
 
 
         if (!response.ok) {
@@ -85,7 +85,7 @@ export const getMovieById=createAsyncThunk(
             },
         };
 
-        let response = await fetch("http://localhost:8080/movie/getMovieByIdLiked/"+arg.id+"/"+arg.email, options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/movie/getMovieByIdLiked/"+arg.id+"/"+arg.email, options);
 
 
         if (!response.ok) {

@@ -24,7 +24,7 @@ export const bookSeatsForUser=createAsyncThunk(
             body: JSON.stringify(data)
         };
 
-        let response = await fetch("http://localhost:8080/booking/addBooking", options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/booking/addBooking", options);
 
 
         if (!response.ok) {
@@ -61,7 +61,7 @@ export const getAllBookingForUser=createAsyncThunk(
             },
         };
 
-        let response = await fetch("http://localhost:8080/user/getAllBookingForUser/"+arg.email, options);
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/user/getAllBookingForUser/"+arg.email, options);
 
 
         if (!response.ok) {
@@ -92,7 +92,7 @@ export const cancelBooking=createAsyncThunk(
             },
         };
 
-        let response = await fetch("http://localhost:8080/booking/cancelBooking/"+arg.bookingId, options);
+        let response = await fetch(process.env.REACT_BACKEND_URL+"/booking/cancelBooking/"+arg.bookingId, options);
 
 
         if (!response.ok) {
