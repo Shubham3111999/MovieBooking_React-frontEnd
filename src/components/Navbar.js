@@ -63,9 +63,9 @@ const Navbar = () => {
                   </button>
                   {showDropdown && (
                     <div className="dropdown-menu dropdown-menu-end show">
-                      <a className="dropdown-item" href="/user-details">
+                      <Link className="dropdown-item" to="/userDetail" onClick={toggleDropdown}>
                         User Details
-                      </a>
+                      </Link>
                       <Link className="dropdown-item" to="/signIn" onClick={logOutHandler}>
                         Logout
                       </Link>

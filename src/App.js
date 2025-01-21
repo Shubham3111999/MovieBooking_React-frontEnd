@@ -10,6 +10,8 @@ import SignUp from "./components/SignUp";
 import TheaterList from "./components/TheaterList";
 
 import {createBrowserRouter, RouterProvider} from "react-router-dom"
+import UserDetails from "./components/UserDetails";
+import ResetPassword from "./components/ResetPassword";
 
 
 function App() {
@@ -26,6 +28,8 @@ function App() {
         {path:"/shows/:theaterId", element:<SeatGrid/>},
         {path:"/history", element:<BookingHistory/>},
         {path:"/likedMovies", element:<LikedMovies/>},
+        {path:"/userDetail", element:<UserDetails/>},
+        {path:"/resetPass", element:<ResetPassword/>},
       ]
     },
     {

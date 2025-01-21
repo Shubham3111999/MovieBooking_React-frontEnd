@@ -1,0 +1,50 @@
+.container {
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 8px;
+  background-color: rgb(48, 45, 45);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.user-detail {
+  text-align: center;
+  margin: 20px;
+  color: #f5f5f5;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #d3d3d3;
+}
+
+.button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  background-color: rgb(216, 54, 54);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.button:hover {
+  background-color: rgb(176, 40, 40);
+  box-shadow: 0 4px 8px rgba(216, 54, 54, 0.5);
+}
+
+.button:active {
+  background-color: rgb(150, 30, 30);
+  box-shadow: 0 2px 4px rgba(216, 54, 54, 0.3);
+}
+

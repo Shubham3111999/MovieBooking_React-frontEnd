@@ -56,7 +56,7 @@ const MovieList = () => {
     setLocalMovies(searchedMovies)
 
   },400),
-    [movies]
+    [movies,searchText,locationBtnText]
   )
 
   const handleSearch=(e)=>{

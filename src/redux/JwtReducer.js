@@ -1,6 +1,36 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from 'react-toastify';
 
+//update user password
+export const updateUserPassword=createAsyncThunk(
+    "updateUserPassword",
+
+    async (arg, thunkApi)=>{
+        const data = {
+            "email": arg.email,   //get email 
+            "password": arg.password,   //get password
+            "role":"ROLE_USER"     //role user
+        }
+
+        const options = {
+            method: "PUT", // Specify the request method
+            headers: {
+                "Content-Type": "application/json", // Indicate JSON payload
+                "Authorization": `Bearer ${arg.token}`
+            },
+            body: JSON.stringify(data), // Convert the JavaScript object to a JSON string
+        }
+
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/user/updateUser/"+arg.email,options);
+
+        if (!response.ok) {
+            return thunkApi.rejectWithValue("Failed to update password");
+        }
+
+        return response.json();
+    }
+)
+
 //sign up user
 export const signUpUser=createAsyncThunk(
     "signUpUser",
@@ -53,7 +83,6 @@ export const fetchJwt = createAsyncThunk(
         let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/auth/login", options);
 
         if (!response.ok) {
-           
             return thunkApi.rejectWithValue("Credential failed");
         }
 
@@ -90,6 +119,8 @@ const jwtSlice = createSlice({
             }   
         }).addCase(signUpUser.rejected, (state, action) => {   //sign in
                 toast.error("Failed to sign up");
+        }).addCase(updateUserPassword.fulfilled, (state, action) => {   //sign in
+                toast.success("Password updated");
         })
     }
 

@@ -17,3 +17,20 @@
          MAIL_PASSWORD:D07ECDF7C71FB3896DF659672FBBD11C6666
          MAIL_PORT:2525
          KAFKA_SERVER: localhost:9092
+
+
+//for adding data to backend
+1. Add location  //optional with 2nd step
+2. Add movies
+3. Add theaters
+4. add shows  //seat will be added with this
+
+//entity relationship
+Movie @ManyToMany location
+Location @ManyToMany Movie, @OneToMany theaters
+Theater @ManyToOne location, @OneToMany Shows
+Shows @ManyToOne Movies , @OneToMany seats
+Seat @ManyToOne shows
+Booking @OneToMany Seats, @ManyToOne User
+User @OneToMany Booking, @ManyToMany movies(likedmovies), @ManyToOne role
+Role @OneToMany user

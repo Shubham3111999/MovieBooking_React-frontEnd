@@ -12,7 +12,7 @@ import { action } from '../redux/TheaterReducer';
 import MovieDetail from "./MovieDetail";
 
 
-const SeatGrid = ({ rows = 3, columns = 3 }) => {
+const SeatGrid = ({ rows = 2, columns = 2 }) => {
 
   //based on this state build dateTimeShowObj in useEffect and other states 
   const { theaters, movieSelected, locationName } = useSelector((state) => state.theaterReducer);
@@ -111,19 +111,23 @@ const SeatGrid = ({ rows = 3, columns = 3 }) => {
             continue; // Skip older dates
           }
 
+          console.log('current show babay ', currentShow);
 
-          if (!showDateTimeSeat.hasOwnProperty(currentShow.date)) {
-            showDateTimeSeat[currentShow.date] = [{ time: currentShow.time, seats: currentShow.seats, showId: currentShow.id }];
-          } else {
-            showDateTimeSeat[currentShow.date] = [...showDateTimeSeat[currentShow.date], { time: currentShow.time, seats: currentShow.seats, showId: currentShow.id }]
+          if(currentShow.movie.id == movieSelected){
+            if (!showDateTimeSeat.hasOwnProperty(currentShow.date) ) {
+              showDateTimeSeat[currentShow.date] = [{ time: currentShow.time, seats: currentShow.seats, showId: currentShow.id }];
+            } else {
+              showDateTimeSeat[currentShow.date] = [...showDateTimeSeat[currentShow.date], { time: currentShow.time, seats: currentShow.seats, showId: currentShow.id }]
+            }
           }
-
         }
 
       }
     })
 
     setDateTimeShowObj(showDateTimeSeat)   //set dateTimeObject
+
+    console.log('setDateTimeShowObj ', showDateTimeSeat);
     
     //build dates state
     const datesArray = [];
@@ -200,7 +204,7 @@ const SeatGrid = ({ rows = 3, columns = 3 }) => {
           }))
         );
 
-        setSeatGrid(updatedGrid);
+        setSeatGrid(updatedGrid);   //update seat grid
 
         //if u change time and come again to same time will show updated seat booked
 

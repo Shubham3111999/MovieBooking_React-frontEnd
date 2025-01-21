@@ -14,10 +14,10 @@ export default function NotFound() {
     const navigation = useNavigate();
 
     useEffect(() => {
-        setInterval(() => {
+        setTimeout(() => {
            navigation(-1);
         }, 3000)
-    })
+    },[])
 
     return (
         <>

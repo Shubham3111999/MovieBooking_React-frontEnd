@@ -92,8 +92,8 @@ export const cancelBooking=createAsyncThunk(
             },
         };
 
-        let response = await fetch(process.env.REACT_BACKEND_URL+"/booking/cancelBooking/"+arg.bookingId, options);
-
+        let response = await fetch(process.env.REACT_APP_BACKEND_URL+"/booking/cancelBooking/"+arg.bookingId, options);
+        
 
         if (!response.ok) {
 

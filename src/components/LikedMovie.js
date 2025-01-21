@@ -18,7 +18,7 @@ const LikedMovies = () => {
 
   return (
     <div className="liked-movies">
-      <h2>Liked Movies</h2>
+      <h1>Liked Movies</h1>
       <div className="liked-movies-grid">
         {likedMovies.map((movie) => (
           <div key={movie.id} className="liked-movie-card position-relative">
